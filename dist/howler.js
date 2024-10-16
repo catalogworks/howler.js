@@ -1,5 +1,5 @@
 /*!
- *  howler.js v2.2.5
+ *  howler.js v2.2.6
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
@@ -359,7 +359,9 @@
 
               if (sound && sound._node && !sound._node._unlocked) {
                 sound._node._unlocked = true;
+                var currentTime = sound._node.currentTime;
                 sound._node.load();
+                sound._node.currentTime = currentTime;
               }
             }
           }
@@ -2620,7 +2622,7 @@
 /*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
  *  
- *  howler.js v2.2.5
+ *  howler.js v2.2.6
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
