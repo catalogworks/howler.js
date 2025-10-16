@@ -1010,6 +1010,32 @@
     },
 
     /**
+     * Resume playback of the current sound, or start playing if no sound exists
+     * Useful for MediaSession API handlers that need to resume after pause
+     * @return {Number} sound Id.
+     */
+    resume: function() {
+      var self = this;
+      
+      // If we have an existing paused sound, play it with its ID
+      if (self._sounds.length > 0 && self._sounds[0]._paused) {
+        return self.play(self._sounds[0]._id);
+      }
+      
+      // Otherwise just play normally
+      return self.play();
+    },
+
+
+    /**
+     * Get the internal sounds array
+     * @return {Array} array of sound objects
+     */
+    getSounds: function() {
+      return this._sounds;
+    },
+
+    /**
      * Pause playback and save current position.
      * @param  {Number} id The sound ID (empty to pause all in group).
      * @return {Howl}
