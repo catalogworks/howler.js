@@ -1,5 +1,5 @@
 /*!
- *  howler.js v2.2.6
+ *  howler.js v2.2.7
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
@@ -2648,7 +2648,7 @@
 /*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
  *  
- *  howler.js v2.2.6
+ *  howler.js v2.2.7
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
